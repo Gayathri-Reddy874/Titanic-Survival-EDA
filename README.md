@@ -1,54 +1,120 @@
-# 🚢 Titanic Survival Analysis — Industry-Level EDA Project
+# 🚢 Titanic Survival Analysis — End-to-End EDA + Streamlit Dashboard
 
 ## 📌 Overview
 
-This project performs **Advanced Exploratory Data Analysis (EDA)** on the famous Titanic dataset using Python and Seaborn.
+This project is an **End-to-End Data Science EDA Solution** combining:
 
-The analysis uncovers the major factors influencing passenger survival through:
+* 📓 **Jupyter Notebook** for Exploratory Data Analysis
+* 🚀 **Streamlit Dashboard** for Interactive Data Visualization
 
-* Data Cleaning
-* Feature Engineering
-* KPI Analysis
-* Statistical Insights
-* Data Visualization
-* Business Intelligence Reporting
+The project analyzes Titanic passenger data to uncover survival patterns based on:
 
-The goal is to extract meaningful insights and understand survival patterns during the Titanic disaster.
+* Gender
+* Passenger Class
+* Age
+* Fare
+* Family Size
+
+The goal is to derive meaningful insights through data analysis and visualization.
 
 ---
 
-# 🎯 Business Problem Statement
+# 🎯 Objective
 
-The Titanic disaster resulted in massive loss of life, but survival was not random.
+To explore and visualize the key factors that influenced passenger survival on the Titanic using:
 
-This project analyzes key factors such as:
+* Exploratory Data Analysis (EDA)
+* Data Cleaning
+* Feature Engineering
+* Statistical Analysis
+* Interactive Dashboard Visualization
 
-* Gender impact on survival
-* Passenger class influence
-* Age distribution patterns
-* Fare-based survival trends
-* Embarkation port analysis
-* Family size impact
+---
 
-to identify the major drivers behind passenger survival probability.
+# 🧠 Business Problem Statement
+
+The Titanic disaster demonstrated that survival was influenced by multiple socio-economic and demographic factors.
+
+This project answers critical questions such as:
+
+* Who survived and why?
+* Did gender influence survival?
+* Did passenger class impact survival chances?
+* Were children prioritized during rescue?
+* How did fare affect survival probability?
+* Does family size influence survival outcomes?
+
+---
+
+# 📊 Project Components
+
+## 📓 1. Jupyter Notebook — EDA Analysis
+
+Located in:
+
+```bash
+notebooks/Titanic_EDA.ipynb
+```
+
+### Includes:
+
+* Data Loading using Seaborn
+* Data Cleaning & Missing Value Handling
+* Feature Engineering
+* Statistical Summaries
+* Exploratory Data Analysis
+* Correlation Analysis
+* Data Visualization
+
+---
+
+## 🚀 2. Streamlit Dashboard — Interactive Analytics App
+
+Main application file:
+
+```bash
+app.py
+```
+
+### Dashboard Features:
+
+* Interactive Filters
+
+  * Gender Filter
+  * Passenger Class Filter
+
+* KPI Metrics Dashboard
+
+  * Total Passengers
+  * Survival Rate
+  * Total Survivors
+  * Total Non-Survivors
+
+* Interactive Visualizations
+
+  * Survival Distribution
+  * Gender Analysis
+  * Passenger Class Analysis
+  * Age Distribution
+  * Fare Analysis
 
 ---
 
 # 🛠️ Technologies Used
 
-| Technology       | Purpose                           |
-| ---------------- | --------------------------------- |
-| Python           | Core Programming                  |
-| Pandas           | Data Manipulation                 |
-| NumPy            | Numerical Operations              |
-| Matplotlib       | Data Visualization                |
-| Seaborn          | Statistical Visualization         |
-| Scikit-learn     | Data Preprocessing & ML Utilities |
-| Jupyter Notebook | Interactive Analysis              |
+| Technology       | Purpose                   |
+| ---------------- | ------------------------- |
+| Python           | Core Programming          |
+| Pandas           | Data Manipulation         |
+| NumPy            | Numerical Computing       |
+| Matplotlib       | Data Visualization        |
+| Seaborn          | Statistical Visualization |
+| Streamlit        | Interactive Dashboard     |
+| Jupyter Notebook | Exploratory Analysis      |
 
 ---
 
-# 📂 Dataset Source
+# 📊 Dataset
 
 The dataset is directly loaded using Seaborn:
 
@@ -58,103 +124,37 @@ import seaborn as sns
 df = sns.load_dataset("titanic")
 ```
 
-✅ No external dataset download required.
+### ✅ Dataset Advantages
 
----
-
-# 📊 Key Performance Indicators (KPIs)
-
-The project evaluates the following KPIs:
-
-* Total Passengers
-* Total Survivors
-* Total Non-Survivors
-* Overall Survival Rate
-* Survival by Gender
-* Survival by Passenger Class
-* Fare Distribution Analysis
-* Embarkation Port Analysis
-* Family Size Impact
-
----
-
-# 📈 Visualizations Generated
-
-This project generates multiple insightful visualizations including:
-
-| Visualization              | Description                  |
-| -------------------------- | ---------------------------- |
-| Survival Distribution      | Pie Chart                    |
-| Gender Survival Comparison | Bar Plot                     |
-| Passenger Class Analysis   | Count Plot                   |
-| Age Distribution           | Histogram + KDE              |
-| Fare vs Survival           | Box Plot                     |
-| Embarkation Analysis       | Bar Plot                     |
-| Family Size Impact         | Line Plot                    |
-| Correlation Heatmap        | Feature Correlation Analysis |
-
-All generated images are saved inside:
-
-```bash
-images/
-```
-
----
-
-# 🔍 Key Insights
-
-## 1️⃣ Gender Plays a Major Role in Survival
-
-Female passengers had significantly higher survival rates compared to males.
-
----
-
-## 2️⃣ Socioeconomic Status Matters
-
-First-class passengers had the highest survival probability.
-
----
-
-## 3️⃣ Fare Correlates with Survival
-
-Passengers who paid higher fares had better survival outcomes.
-
----
-
-## 4️⃣ Children Had Priority
-
-Younger passengers showed higher chances of survival.
-
----
-
-## 5️⃣ Family Size Impacts Survival
-
-Small to medium-sized family groups had better survival rates than solo travelers or very large families.
+* No API required
+* No external CSV download needed
+* Fully reproducible workflow
 
 ---
 
 # 📁 Project Structure
 
-```bash
+```
 Titanic-Survival-EDA/
 │
-├── src/
-│   └── eda.py
+├── app.py                       # Streamlit Dashboard
 │
 ├── notebooks/
-│   └── Titanic_EDA.ipynb
+│   └── Titanic_EDA.ipynb        # Full EDA Notebook
 │
-├── images/
-│   └── (Generated Visualizations)
+├── src/
+│   └── eda.py                   # Script Version
 │
-├── requirements.txt
-├── README.md
+├── images/                      # Saved Visualizations
+│
+├── requirements.txt             # Project Dependencies
+├── README.md                    # Documentation
 └── .gitignore
 ```
 
 ---
 
-# ⚙️ How to Run This Project
+# ▶️ How to Run the Project
 
 ## 1️⃣ Clone the Repository
 
@@ -165,18 +165,18 @@ cd Titanic-Survival-EDA
 
 ---
 
-## 2️⃣ Create Virtual Environment (Recommended)
+## 2️⃣ Create Virtual Environment
 
 ### Windows
 
-```bash
+```bash 
 python -m venv venv
 venv\Scripts\activate
 ```
 
-### Linux / Mac
+### Linux / macOS
 
-```bash
+```bash 
 python3 -m venv venv
 source venv/bin/activate
 ```
@@ -191,49 +191,111 @@ pip install -r requirements.txt
 
 ---
 
-## 4️⃣ Run the EDA Script
+## 4️⃣ Run Jupyter Notebook (EDA)
 
 ```bash
-python src/eda.py
+jupyter notebook
+```
+
+Open:
+
+```bash
+notebooks/Titanic_EDA.ipynb
 ```
 
 ---
 
-# 📦 requirements.txt
+## 5️⃣ Run Streamlit Dashboard
 
-```txt
-pandas==2.0.3
-numpy==1.24.3
-matplotlib==3.7.2
-seaborn==0.13.2
-scikit-learn==1.3.0
+```bash
+streamlit run app.py
 ```
 
 ---
 
-# 🚀 Future Improvements
+# 🌐 Deployment
 
-* Build Streamlit Interactive Dashboard
-* Add Machine Learning Classification Models
-* Deploy Web Application using Flask/Streamlit
-* Perform Statistical Hypothesis Testing
-* Integrate Power BI Dashboard
-* Add Feature Engineering Pipeline
-* Implement Automated Reporting
+This project is deployed using **Streamlit Cloud**.
+
+### Live Application
+
+```
+https://your-streamlit-app-link
+```
 
 ---
 
-# 💡 Learning Outcomes
+# 📊 Key Insights
 
-Through this project, the following concepts were practiced:
+## 👩 Gender Impact
+
+Female passengers had significantly higher survival rates compared to males.
+
+---
+
+## 🏛 Passenger Class Influence
+
+First-class passengers had the highest probability of survival.
+
+---
+
+## 👶 Age Factor
+
+Children were prioritized during rescue operations and showed higher survival rates.
+
+---
+
+## 💰 Fare Influence
+
+Passengers who paid higher fares generally had better survival chances.
+
+---
+
+## 👨‍👩‍👧 Family Size Impact
+
+Small to medium-sized family groups had higher survival rates compared to solo travelers or very large families.
+
+---
+
+# 📈 Visualizations Included
+
+The project generates several analytical visualizations:
+
+* Survival Distribution Pie Chart
+* Gender-Based Survival Bar Plot
+* Passenger Class Count Plot
+* Age Distribution Histogram + KDE
+* Fare vs Survival Box Plot
+* Embarkation Port Analysis
+* Family Size Analysis
+* Correlation Heatmap
+
+---
+
+# 🚀 Future Enhancements
+
+* Add Machine Learning Survival Prediction Model
+* Deploy with GitHub + Streamlit Cloud CI/CD
+* Add Power BI Dashboard Integration
+* Build SQL-Based Data Pipeline
+* Add Authentication System
+* Improve UI with Multi-Page Navigation
+* Add Real-Time Analytics Features
+
+---
+
+# 📚 Learning Outcomes
+
+This project demonstrates practical understanding of:
 
 * Exploratory Data Analysis (EDA)
 * Data Cleaning & Preprocessing
-* Data Visualization
+* Feature Engineering
 * Statistical Analysis
-* Feature Correlation Analysis
+* Data Visualization
+* Dashboard Development
+* Streamlit Application Development
 * Business Insight Generation
-* Python Data Analytics Workflow
 
 ---
 
@@ -245,6 +307,10 @@ Through this project, the following concepts were practiced:
 
 ---
 
-# ⭐ If You Like This Project
+# ⭐ Support
 
-If you found this project useful, consider giving it a ⭐ on GitHub!
+If you found this project useful:
+
+* ⭐ Star the Repository
+
+---
