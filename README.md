@@ -220,7 +220,7 @@ This project is deployed using **Streamlit Cloud**.
 ### Live Application
 
 ```
-https://your-streamlit-app-link
+Titanic_Survival(https://titanic-survival-eda-fgdw7zpuxucb6qrtbvqucw.streamlit.app/)
 ```
 
 ---
